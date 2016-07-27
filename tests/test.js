@@ -59,6 +59,28 @@ test('pys show be tested', function (t) {
 
   console.log('--------------------------------start test except input');
   t.equal(pys(str)(' : 2 '), '12');
-  t.equal(pys(str)(' -1 : 0 : -1 '), '098765432'); 
+  t.equal(pys(str)(' -1 : 0 : -1 '), '098765432');
+
+  function slice_object() {
+    pys({})(':2:0');
+  }
+  
+  t.throws(slice_object, /^Error: object must be string \/ array.$/);
+
+  function slice_zero() {
+    pys(str)(':2:0');
+  }
+  
+  t.throws(slice_zero, /^Error: slice step cannot be zero.$/);
+
+  function not_number_empty() {
+    pys(str)('a:1');
+  }
+  t.throws(not_number_empty, /^Error: slice indices must be integer \/ blank.$/);
+
+  function not_number_empty_1() {
+    pys(str)('a:str');
+  }
+  t.throws(not_number_empty_1, /^Error: slice indices must be integer \/ blank.$/);
   t.end();
 });

@@ -31,54 +31,26 @@
    *  this is a enganced String.substring / Array.slice function, with python style paramter.
   **/
   var PYS = function(p) {
+    //
+    var undefinedVar; // undefined
+
+    // throw the exception/
+    function except(m) {
+      throw new Error(m);
+    }
     /**
-     * get type of the var.
+     * convent var to INT, if empty, then get the default value.
     **/
-    function what(v) {
-      if (v === null) return 'null';
-      if (v !== Object(v)) return typeof v;
-      return ({}).toString.call(v).slice(8, -1).toLowerCase();
-    }
     function toInt(v, d) {
-      v = parseInt(v);
-      return isNaN(v) ? d : v;
+      v = v.replace(/(^\s*)|(\s*$)/g, '');
+      if ('' === v) return d;
+      return parseInt(v);
     }
-    function parseSelector(selector) {
-      selector = (selector + '').split(':');
-      var start, end, step, len = selector.length;
-
-      if (len >= 1) start = toInt(selector[0], 0);
-      if (len >= 2) end = toInt(selector[1], p.length);
-      if (len >= 3) step = toInt(selector[2], 1);
-
-      if (start === undefined) throw new Error('slice start cannot be empty.');
-      if (end === undefined) end = start + 1;
-      if (step === undefined) step = 1;
-      return [start, end, step];
-    }
-    function sub(obj, selector) {
-      var rst = [], len = p.length;
-          start = (selector[0] < 0 ? len + selector[0] : selector[0]), 
-          end = (selector[1] < 0 ? len + selector[1] : selector[1]), 
-          step = selector[2];
-
-      if (step === 0) throw new Error('slice step cannot be zero.');
-
-      if (end === start || (end - start) * step < 0) {
-        return rst;
-      }
-      // direct
-      if (step > 0) {
-        for (; start < end; start += step) {
-          rst.push(obj[start]);
-        }
-      }
-      else {
-        for (; end < start; start += step) {
-          rst.push(obj[start]);
-        }
-      }
-      return rst;
+    /**
+     * var is not undefined, but is NaN.
+    **/
+    function justNaN(v) {
+      return v !== undefinedVar && isNaN(v);
     }
     /**
      * Python style Substring
@@ -90,14 +62,52 @@
      * Python style Slice
     **/
     function pyStyleSlice(selector) {
-      return sub(p, parseSelector(selector));
+      // parse selector
+      // get start, end, step
+      selector = (selector + '').split(':');
+      var start, end, step, 
+          slen = selector.length,
+          rst = [],
+          len = p.length;
+
+      if (slen > 0) start = toInt(selector[0], 0);
+      if (slen > 1) end = toInt(selector[1], len);
+      if (slen > 2) step = toInt(selector[2], 1);
+
+      if (start === undefinedVar || justNaN(start) || justNaN(end) || justNaN(step)) 
+        except('slice indices must be integer / blank.');
+      if (end === undefinedVar) 
+        end = start + 1;
+      if (step === undefinedVar) 
+        step = 1;
+
+      // sub input var
+      start = start < 0 ? len + start : start, 
+      end = end < 0 ? len + end: end;
+
+      if (step === 0) except('slice step cannot be zero.');
+
+      if (end === start || (end - start) * step < 0) return rst;
+
+      // direction
+      if (step > 0) {
+        for (; start < end; start += step)
+          rst.push(p[start]);
+      }
+      else {
+        for (; end < start; start += step)
+          rst.push(p[start]);
+      }
+      return rst;
     }
 
     function pyStyle(p) {
-      p = what(p);
+      // get type of the var. from repo: https://github.com/hustcc/what.js
+      p = ({}).toString.call(p).slice(8, -1).toLowerCase();
       if (p === 'string') return pyStyleSubstring;
       if (p === 'array') return pyStyleSlice;
-      throw new Error('Argument can only be array / string.');
+      // other typeof var is not supported.
+      except('object must be string / array.');
     }
     
     return pyStyle(p);

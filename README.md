@@ -1,6 +1,6 @@
 # pys
 
-> **pys** is a simple(`1 kb`) javascript library to engance String.substring / Array.slice with `python slice style`.
+> **pys** is a simple(`less then 1 kb`) javascript library to engance String.substring / Array.slice with `python slice style`.
 
 [![Build Status](https://travis-ci.org/hustcc/pys.svg?branch=master)](https://travis-ci.org/hustcc/pys) [![npm](https://img.shields.io/npm/v/pys.svg?style=flat-square)](https://www.npmjs.com/package/pys) [![npm](https://img.shields.io/npm/dt/pys.svg?style=flat-square)](https://www.npmjs.com/package/pys) [![npm](https://img.shields.io/npm/l/pys.svg?style=flat-square)](https://www.npmjs.com/package/pys)
 
