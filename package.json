@@ -1,0 +1,45 @@
+{
+  "name": "pys",
+  "officialName": "pys",
+  "version": "1.0.0",
+  "summary": "pys is a simple javascript library to engance String.substring / Array.slice with python slice style.",
+  "description": "pys is a simple javascript library to engance String.substring / Array.slice with python slice style.",
+  "author": {
+    "name": "hustcc",
+    "url": "http://git.hust.cc/pys"
+  },
+  "license": "MIT",
+  "keywords": [
+    "pys",
+    "python slice",
+    "string",
+    "array",
+    "python-style",
+    "substring",
+    "slice",
+    "enganced substring",
+    "enganced slice"
+  ],
+  "main": "dist/pys.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hustcc/pys"
+  },
+  "bugs": {
+    "url": "https://github.com/hustcc/pys/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.2",
+    "gulp-rename": "^1.2.2",
+    "tape": "^3.6.1"
+  },
+  "scripts": {
+    "lint": "jshint src/pys.js",
+    "test": "npm run lint && node tests/test.js",
+    "build": "gulp mini && npm run test"
+  },
+  "dependencies": {
+  }
+}
