@@ -18,7 +18,8 @@ Use this library, we can do similar things in javascript.
 
 > **npm install pys**
 
-Then import it.
+
+# 2. Import It
 
 ```js
 var pys = require('pys');
@@ -29,12 +30,12 @@ import pys from 'pys';
 ```
 
 
-# 2. Detail Usage
+# 3. Usage & API
 
 There is only one API named `pys`. Below:
 
 ```js
-# for array
+// for array
 var arr = [1, '2', 3, '4', 5, '6', 7, '8', 9, '0'];
 
 pys(arr)('2:5');  		// [3, '4', 5]
@@ -43,7 +44,7 @@ pys(arr)('-2:');  		// [9, '0']
 pys(arr)('1:5:2');  	// ['2', '4']
 pys(arr)('5:1:-2');  	// ['6', '4']
 
-# for string
+// for string
 var str = '1234567890';
 pys(str)('2:5');  		// '345'
 pys(str)(':-2');  		// '12345678'
@@ -54,7 +55,7 @@ pys(str)('5:1:-2');  	// '64'
 ```
 
 
-# 3. Test
+# 4. Test
 
 > npm install
 > 
