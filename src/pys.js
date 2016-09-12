@@ -4,7 +4,7 @@
   https://github.com/hustcc/pys
 **/
 /**
- *  pys( p )(selector) -> String
+ *  pys(p)(selector) -> String / Array
  *  - p: the origin string / array to be substring / slice.
  *  - selector: python style substring style
  * [:]
@@ -21,7 +21,7 @@
  * [1::2]
  * [::2]
  *
- *  this is a enganced String.substring / Array.slice function, with python style paramter.
+ *  this is an enganced String.substring / Array.slice function, with python slice style.
 **/
 /* jshint expr: true */
 var PYS = function(p) {
