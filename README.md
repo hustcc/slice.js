@@ -70,6 +70,6 @@ pys(str)('5:1:-2');  	// '64'
 > npm test
 
 
-# 4. LICENSE
+# 5. LICENSE
 
 MIT
