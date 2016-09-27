@@ -1,9 +1,9 @@
 {
   "name": "pys",
   "officialName": "pys",
-  "version": "1.0.2",
-  "summary": "pys is a simple(~0.7kb) javascript library to engance String.substring / Array.slice with python slice style.",
-  "description": "pys is a simple(~0.7kb) javascript library to engance String.substring / Array.slice with python slice style.",
+  "version": "1.0.3",
+  "summary": "pys is a simple(< 1 Kb) javascript library to engance String.substring / Array.slice with python slice style.",
+  "description": "pys is a simple(< 1 Kb) javascript library to engance String.substring / Array.slice with python slice style.",
   "author": {
     "name": "hustcc",
     "url": "http://git.hust.cc/pys"

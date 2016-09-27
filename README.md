@@ -1,6 +1,6 @@
 # pys
 
-> **pys** is a simple(`~ 700b`) javascript library to engance String.substring / Array.slice with `python slice style`.
+> **pys** is a simple(`< 1 Kb`) javascript library to engance String.substring / Array.slice with `python slice style`.
 
 In python, we can process string or array with code below:
 
@@ -20,6 +20,14 @@ Use this library, we can do similar things in javascript.
 
 
 # 2. Import It
+
+ - `Script` tag.
+
+```html
+<script type="text/javascript" src="dist/pys.min.js"></script>
+```
+
+ - `ES6` style.
 
 ```js
 var pys = require('pys');

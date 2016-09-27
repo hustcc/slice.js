@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>pys is a simple(< 1 Kb) javascript library for browserjs / nodejs to engance String.substring / Array.slice with python slice style.</title>
+  <meta name="keywords" content="pys, python slice,string,array,python-style,substring,slice,enganced substring,enganced slice" />
+  <meta name="description" content="pys is a simple(< 1 Kb) javascript library for browserjs / nodejs to engance String.substring / Array.slice with python slice style." />
+  <meta name="subject" content="pys, python slice, substring, enganced substring, enganced slice" />
+  <style type="text/css">
+  pre {
+    background-color: #f6dcd7;
+    padding: 10px 15px;
+  }
+  "pys, python slice,string,array,python-style,substring,slice,enganced substring,enganced slice"
+  </style>
+</head>
+<body>
+  <h1>pys</h1>
+  <p>
+    Project <a href="https://github.com/hustcc/pys">pys</a> is a simple(< 1 Kb) javascript for browserjs / nodejs library to engance String.substring / Array.slice with python slice style.
+  </p>
+  <pre>
+// import library use script tag.
+&lt;script type="text/javascript" src="dist/pys.min.js"&gt;&lt;/script&gt;
+
+// or ES6 style.
+var pys = require('pys');
+  </pre>
+  <hr />
+  <h2>1. Usage for javascript String</h2>
+  <pre>
+var str = '1234567890';
+
+pys(str)('2:5');        // '345'
+pys(str)(':-2');        // '12345678'
+pys(str)('-2:');        // '90'
+pys(str)('1:5:2');      // '24'
+pys(str)('5:1:-2');     // '64'
+  </pre>
+  <h2>2. Usage for javascript Array</h2>
+  <pre>
+var arr = [1, '2', 3, '4', 5, '6', 7, '8', 9, '0'];
+
+pys(arr)('2:5');        // [3, '4', 5]
+pys(arr)(':-2');        // [1, '2', 3, '4', 5, '6', 7, '8']
+pys(arr)('-2:');        // [9, '0']
+pys(arr)('1:5:2');      // ['2', '4']
+pys(arr)('5:1:-2');     // ['6', '4']
+  </pre>
+  <hr />
+
+  <p>
+    The code of pys hosted on Github, click <a href="https://github.com/hustcc/pys">here</a>. Welcome to issue or pull request.
+  </p>
+  <script type="text/javascript" src="dist/pys.min.js"></script>
+</body>
+</html>
