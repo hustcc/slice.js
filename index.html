@@ -11,23 +11,29 @@
     background-color: #f6dcd7;
     padding: 10px 15px;
   }
+  pre.strong {
+    font-weight: bold;
+  }
   "pys, python slice,string,array,python-style,substring,slice,enganced substring,enganced slice"
   </style>
 </head>
 <body>
-  <h1>pys</h1>
+  <h1> pys </h1>
   <p>
     Project <a href="https://github.com/hustcc/pys">pys</a> is a simple(< 1 Kb) javascript for browserjs / nodejs library to engance String.substring / Array.slice with python slice style.
   </p>
+  <h2> Install </h2>
+  <pre class="strong">
+npm install pys </pre>
+  <p> Then import it. </p>
   <pre>
 // import library use script tag.
 &lt;script type="text/javascript" src="dist/pys.min.js"&gt;&lt;/script&gt;
 
 // or ES6 style.
-var pys = require('pys');
-  </pre>
-  <hr />
-  <h2>1. Usage for javascript String</h2>
+var pys = require('pys');</pre>
+
+  <h3>1. Usage for javascript String</h3>
   <pre>
 var str = '1234567890';
 
@@ -37,7 +43,7 @@ pys(str)('-2:');        // '90'
 pys(str)('1:5:2');      // '24'
 pys(str)('5:1:-2');     // '64'
   </pre>
-  <h2>2. Usage for javascript Array</h2>
+  <h3>2. Usage for javascript Array</h3>
   <pre>
 var arr = [1, '2', 3, '4', 5, '6', 7, '8', 9, '0'];
 
