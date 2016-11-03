@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>pys is a simple(< 1 Kb) javascript library for browserjs / nodejs to engance String.substring / Array.slice with python slice style.</title>
-  <meta name="keywords" content="pys, python slice,string,array,python-style,substring,slice,enganced substring,enganced slice" />
-  <meta name="description" content="pys is a simple(< 1 Kb) javascript library for browserjs / nodejs to engance String.substring / Array.slice with python slice style." />
-  <meta name="subject" content="pys, python slice, substring, enganced substring, enganced slice" />
+  <title>slice.js is a simple(< 1 Kb) javascript library for browserjs / nodejs to engance String.substring / Array.slice with python slice style.</title>
+  <meta name="keywords" content="slice.js, python slice,string,array,python-style,substring,slice,enganced substring,enganced slice" />
+  <meta name="description" content="slice.js is a simple(< 1 Kb) javascript library for browserjs / nodejs to engance String.substring / Array.slice with python slice style." />
+  <meta name="subject" content="slice.js, python slice, substring, enganced substring, enganced slice" />
   <style type="text/css">
   body {
     max-width: 1000px;
@@ -21,9 +21,9 @@
   </style>
 </head>
 <body>
-  <h1> pys </h1>
+  <h1> slice.js </h1>
   <p>
-    Project <a href="https://github.com/hustcc/pys">pys</a> is a simple(< 1 Kb) javascript for browserjs / nodejs library to engance String.substring / Array.slice with python slice style.
+    Project <a href="https://github.com/hustcc/slice.js">slice.js</a> is a simple(< 1 Kb) javascript for browserjs / nodejs library to engance String.substring / Array.slice with python slice style.
   </p>
 
   <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -39,40 +39,40 @@
 
   <h2> Install </h2>
   <pre class="strong">
-npm install pys </pre>
+npm install slice.js </pre>
   <p> Then import it. </p>
   <pre>
 // import library use script tag.
-&lt;script type="text/javascript" src="dist/pys.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="dist/slice.js.min.js"&gt;&lt;/script&gt;
 
 // or ES6 style.
-var pys = require('pys');</pre>
+var slice = require('slice.js');</pre>
 
   <h3>1. Usage for javascript String</h3>
   <pre>
 var str = '1234567890';
 
-pys(str)('2:5');        // '345'
-pys(str)(':-2');        // '12345678'
-pys(str)('-2:');        // '90'
-pys(str)('1:5:2');      // '24'
-pys(str)('5:1:-2');     // '64'
+slice(str)('2:5');        // '345'
+slice(str)(':-2');        // '12345678'
+slice(str)('-2:');        // '90'
+slice(str)('1:5:2');      // '24'
+slice(str)('5:1:-2');     // '64'
   </pre>
   <h3>2. Usage for javascript Array</h3>
   <pre>
 var arr = [1, '2', 3, '4', 5, '6', 7, '8', 9, '0'];
 
-pys(arr)('2:5');        // [3, '4', 5]
-pys(arr)(':-2');        // [1, '2', 3, '4', 5, '6', 7, '8']
-pys(arr)('-2:');        // [9, '0']
-pys(arr)('1:5:2');      // ['2', '4']
-pys(arr)('5:1:-2');     // ['6', '4']
+slice(arr)('2:5');        // [3, '4', 5]
+slice(arr)(':-2');        // [1, '2', 3, '4', 5, '6', 7, '8']
+slice(arr)('-2:');        // [9, '0']
+slice(arr)('1:5:2');      // ['2', '4']
+slice(arr)('5:1:-2');     // ['6', '4']
   </pre>
   <hr />
 
   <p>
-    The code of pys hosted on Github, click <a href="https://github.com/hustcc/pys">here</a>. Welcome to issue or pull request.
+    The code of slice.js hosted on Github, click <a href="https://github.com/hustcc/slice.js">here</a>. Welcome to issue or pull request.
   </p>
-  <script type="text/javascript" src="dist/pys.min.js"></script>
+  <script type="text/javascript" src="dist/slice.js.min.js"></script>
 </body>
 </html>

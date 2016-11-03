@@ -1,6 +1,6 @@
-# pys
+# slice.js
 
-> **pys** is a simple(`< 1 Kb`) javascript library to engance String.substring / Array.slice with `python slice style`.
+> **slice.js** is a simple(`< 1 Kb`) javascript library to engance String.substring / Array.slice with `python slice style`.
 
 In python, we can process string or array with code below:
 
@@ -11,12 +11,12 @@ print (string[1:6:2])
 
 Use this library, we can do similar things in javascript.
 
-[![Build Status](https://travis-ci.org/hustcc/pys.svg?branch=master)](https://travis-ci.org/hustcc/pys) [![npm](https://img.shields.io/npm/v/pys.svg?style=flat-square)](https://www.npmjs.com/package/pys) [![npm](https://img.shields.io/npm/dt/pys.svg?style=flat-square)](https://www.npmjs.com/package/pys) [![npm](https://img.shields.io/npm/l/pys.svg?style=flat-square)](https://www.npmjs.com/package/pys)
+[![Build Status](https://travis-ci.org/hustcc/slice.js.svg?branch=master)](https://travis-ci.org/hustcc/slice.js) [![npm](https://img.shields.io/npm/v/slice.js.svg?style=flat-square)](https://www.npmjs.com/package/slice.js) [![npm](https://img.shields.io/npm/dt/slice.js.svg?style=flat-square)](https://www.npmjs.com/package/slice.js) [![npm](https://img.shields.io/npm/l/slice.js.svg?style=flat-square)](https://www.npmjs.com/package/slice.js)
 
 
 # 1. Install
 
-> **npm install pys**
+> **npm install slice.js**
 
 
 # 2. Import It
@@ -24,41 +24,41 @@ Use this library, we can do similar things in javascript.
  - `Script` tag.
 
 ```html
-<script type="text/javascript" src="dist/pys.min.js"></script>
+<script type="text/javascript" src="dist/slice.js.min.js"></script>
 ```
 
  - `ES6` style.
 
 ```js
-var pys = require('pys');
+var slice = require('slice.js');
 
 //or
 
-import pys from 'pys';
+import slice from 'slice.js';
 ```
 
 
 # 3. Usage & API
 
-There is only one API named `pys`. Below:
+There is only one API named `slice`. Below:
 
 ```js
 // for array
 var arr = [1, '2', 3, '4', 5, '6', 7, '8', 9, '0'];
 
-pys(arr)('2:5');  		// [3, '4', 5]
-pys(arr)(':-2');  		// [1, '2', 3, '4', 5, '6', 7, '8']
-pys(arr)('-2:');  		// [9, '0']
-pys(arr)('1:5:2');  	// ['2', '4']
-pys(arr)('5:1:-2');  	// ['6', '4']
+slice(arr)('2:5');  		// [3, '4', 5]
+slice(arr)(':-2');  		// [1, '2', 3, '4', 5, '6', 7, '8']
+slice(arr)('-2:');  		// [9, '0']
+slice(arr)('1:5:2');  	// ['2', '4']
+slice(arr)('5:1:-2');  	// ['6', '4']
 
 // for string
 var str = '1234567890';
-pys(str)('2:5');  		// '345'
-pys(str)(':-2');  		// '12345678'
-pys(str)('-2:');  		// '90'
-pys(str)('1:5:2');  	// '24'
-pys(str)('5:1:-2');  	// '64'
+slice(str)('2:5');  		// '345'
+slice(str)(':-2');  		// '12345678'
+slice(str)('-2:');  		// '90'
+slice(str)('1:5:2');  	// '24'
+slice(str)('5:1:-2');  	// '64'
 
 ```
 

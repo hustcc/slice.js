@@ -1,18 +1,18 @@
 /**
   Copyright (c) 2016 hustcc http://www.atool.org/
   License: MIT 
-  https://github.com/hustcc/pys
+  https://github.com/hustcc/slice.js
 **/
 /* jshint expr: true */
 !function (root, factory) {
   if (typeof module === 'object' && module.exports)
     module.exports = factory();
   else
-    root.pys = factory();
+    root.slice = factory();
 }(typeof window !== 'undefined' ? window : this, 
 function () {
   /**
-   *  pys(p)(selector) -> String / Array
+   *  slice(p)(selector) -> String / Array
    *  - p: the origin string / array to be substring / slice.
    *  - selector: python style substring style
    * [:]
@@ -31,7 +31,7 @@ function () {
    *
    *  this is an enganced String.substring / Array.slice function, with python slice style.
   **/
-  function PYS(p) {
+  function slice(p) {
     var undefinedVar; // undefined, for js code minify.
 
     // throw the exception/
@@ -112,5 +112,5 @@ function () {
     
     return pyStyle(p);
   }
-  return PYS;
+  return slice;
 });

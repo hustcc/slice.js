@@ -1,16 +1,18 @@
 {
-  "name": "pys",
-  "officialName": "pys",
+  "name": "slice.js",
+  "officialName": "slice.js",
   "version": "1.0.3",
-  "summary": "pys is a simple(< 1 Kb) javascript library to engance String.substring / Array.slice with python slice style.",
-  "description": "pys is a simple(< 1 Kb) javascript library to engance String.substring / Array.slice with python slice style.",
+  "summary": "slice.js is a simple(< 1 Kb) javascript library to engance String.substring / Array.slice with python slice style.",
+  "description": "slice.js is a simple(< 1 Kb) javascript library to engance String.substring / Array.slice with python slice style.",
   "author": {
     "name": "hustcc",
-    "url": "http://git.hust.cc/pys"
+    "url": "http://git.hust.cc/slice.js"
   },
   "license": "MIT",
   "keywords": [
     "pys",
+    "slice",
+    "slice.js",
     "python slice",
     "string",
     "array",
@@ -20,13 +22,13 @@
     "enganced substring",
     "enganced slice"
   ],
-  "main": "dist/pys.min.js",
+  "main": "dist/slice.min.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hustcc/pys"
+    "url": "https://github.com/hustcc/slice.js"
   },
   "bugs": {
-    "url": "https://github.com/hustcc/pys/issues"
+    "url": "https://github.com/hustcc/slice.js/issues"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -36,7 +38,7 @@
     "tape": "^3.6.1"
   },
   "scripts": {
-    "lint": "jshint src/pys.js",
+    "lint": "jshint src/slice.js",
     "test": "npm run lint && node tests/test.js",
     "build": "gulp mini && npm run test"
   },
