@@ -1,0 +1,52 @@
+{
+  "name": "nano-slice",
+  "version": "1.0.0",
+  "description": "nano version for slice of string and array like Python.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NanoPackage/nano-slice.git"
+  },
+  "keywords": [
+    "nano",
+    "nano-slice",
+    "nano-package"
+  ],
+  "author": "hustcc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NanoPackage/nano-slice/issues"
+  },
+  "homepage": "https://github.com/NanoPackage/nano-slice#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
+    "jest": "^21.2.1"
+  },
+  "jest": {
+    "testRegex": "(/test)\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "*.{js}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    }
+  }
+}
