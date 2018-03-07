@@ -1,4 +1,4 @@
-import slice from './';
+import slice from './src/index';
 
 describe('nano-slice', () => {
   test('array', () => {
@@ -66,10 +66,10 @@ describe('nano-slice', () => {
 
   test('exception', () => {
     expect(() => {
-      slice('1234567890')['-1:9:0'];
+      const r = slice('1234567890')['-1:9:0'];
     }).toThrow('Step can not be zero!');
     expect(() => {
-      slice(123)['-1:9:0'];
+      const r = slice(123)['-1:9:0'];
     }).toThrow('Only string and array can be sliced!');
   });
 

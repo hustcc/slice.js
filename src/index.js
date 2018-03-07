@@ -1,5 +1,6 @@
 /**
  * 抛出一个异常
+ * @param condition
  * @param s
  */
 const invariant = (condition, s) => {
@@ -32,7 +33,7 @@ const slice = (v, start, end, step) => {
 /**
  * parse a string / number to number.
  *
- * parsetInt('') === NaN
+ * parseInt('') === NaN
  * Number('') === 0
  * @param n
  */
