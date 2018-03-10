@@ -1,6 +1,6 @@
 {
   "name": "slice.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "nano version for slice of string and array like Python.",
   "main": "lib/index.js",
   "scripts": {

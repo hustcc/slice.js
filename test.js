@@ -3,10 +3,13 @@ import slice from './src/index';
 describe('nano-slice', () => {
   test('array', () => {
     const arr = [1, '2', 3, '4', 5, '6', 7, '8', 9, '0'];
-    expect(slice(arr)[200]).toEqual([undefined]);
+    expect(slice(arr)[200]).toEqual(undefined);
 
-    expect(slice(arr)['2']).toEqual([3]);
-    expect(slice(arr)[2]).toEqual([3]);
+    expect(slice(arr)['2']).toEqual(3);
+    expect(slice(arr)[2]).toEqual(3);
+
+    expect(slice(arr)['-2']).toEqual(9);
+    expect(slice(arr)[-2]).toEqual(9);
 
     expect(slice(arr)['0:3']).toEqual([1, '2', 3]);
     expect(slice(arr)['2:5']).toEqual([3, '4', 5]);
@@ -34,10 +37,13 @@ describe('nano-slice', () => {
   });
   test('string', () => {
     const str = '1234567890';
-    expect(slice(str)[200]).toEqual('');
+    expect(slice(str)[200]).toEqual(undefined);
 
     expect(slice(str)['2']).toEqual('3');
     expect(slice(str)[2]).toEqual('3');
+
+    expect(slice(str)['-2']).toEqual('9');
+    expect(slice(str)[-2]).toEqual('9');
 
     expect(slice(str)['0:3']).toEqual('123');
     expect(slice(str)['2:5']).toEqual('345');
